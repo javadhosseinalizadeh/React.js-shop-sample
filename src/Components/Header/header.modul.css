@@ -1,0 +1,26 @@
+header {
+    background-color: #232a46;
+
+}
+nav ul{
+list-style: none;
+display: flex;
+padding: 0;
+margin: 0;
+}
+nav ul a {
+    text-decoration: none;
+    color: #e8e4c9;
+    display: block;
+    padding: 1em  1em;
+    transition: all .4s;
+}
+
+nav ul a:hover {
+    background-color: rgb(137, 137, 172);
+    color: #cbcbcb;
+}
+
+nav ul a.active {
+    color: #e0d8b5;
+}

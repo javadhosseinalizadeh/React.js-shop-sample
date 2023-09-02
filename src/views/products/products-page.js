@@ -28,6 +28,17 @@ const ProductsPage = () => {
     })
   }
 
+  const [cart, setCart] = useState([]);
+
+  const handleClick = (title, price) => {
+
+    const newItem = { title, price };
+
+    // Add the new item to the cart
+    setCart((prevCart) => [...prevCart, newItem]);
+    console.log(newItem)
+  };
+
   const filteredProducts = productList.filter((product) => {
     const titleMaches = product.title.includes(searchQuery)
     const categoryMatches = 
@@ -72,7 +83,7 @@ const ProductsPage = () => {
         </div>
       </div>
     <div>
-      {productList.length > 0  ? <ProductCardView products={filteredProducts}></ProductCardView> : <p>در حال بارگزاری</p>}
+      {productList.length > 0  ? <ProductCardView products={filteredProducts} handleClick={handleClick} cart={cart}></ProductCardView> : <p>در حال بارگزاری</p>}
     </div>
     </Fragment>
   )

@@ -4,8 +4,14 @@ import ProductCard from './product-card'
 import ProductCardTitle from './product-card-title'
 import ProductCardText from './product-card-text'
 import ProductCardFooter from './product-card-footer'
-
+import {useDispatch} from 'react-redux'
+import { addToCart } from '../../redux/cartSlice'
 const ProductCardView = ({products}) => {
+
+  const dispatch = useDispatch(); 
+   const handleAddToCart = (product) => {
+      dispatch(addToCart(product))
+   }
   return (
     <div>
         <ProductCardWrapper>
@@ -15,8 +21,8 @@ const ProductCardView = ({products}) => {
                      <ProductCardText>{product.description}</ProductCardText>
                      <ProductCardText>قیمت: {product.price}{" "}</ProductCardText>
                      <ProductCardFooter>
-                        <button>
-                            <span>خرید</span>
+                        <button onClick={()=>handleAddToCart(product)}>
+                            <span > Add to cart</span>
                         </button>
                      </ProductCardFooter>
                 </ProductCard>)}

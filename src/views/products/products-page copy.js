@@ -39,7 +39,7 @@ const ProductsPage = () => {
   //     return selectedCategories.some((category) => product.categories.includes(category)
   //     )
   //   }
-  // })
+  // })-
   return (
     <Fragment>
       <div>

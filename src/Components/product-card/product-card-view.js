@@ -18,11 +18,11 @@ const ProductCardView = ({products}) => {
             {products.map(product => 
                 <ProductCard key={product.id}>
                     <ProductCardTitle>{product.title}</ProductCardTitle>
-                     <ProductCardText>{product.description}</ProductCardText>
+                     <ProductCardText>توضیحات: {product.description}</ProductCardText>
                      <ProductCardText>قیمت: {product.price}{" "}</ProductCardText>
                      <ProductCardFooter>
                         <button onClick={()=>handleAddToCart(product)}>
-                            <span > Add to cart</span>
+                            <span > اضافه کردن به سبد خرید</span>
                         </button>
                      </ProductCardFooter>
                 </ProductCard>)}

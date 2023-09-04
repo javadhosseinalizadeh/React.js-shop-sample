@@ -1,12 +1,12 @@
 
 .cart{
     cursor: pointer;
-   
+    
 }
 
 .cart span:nth-child(1){
-    font-size: 2rem;
-    color: white;
+    font-size: 1.01rem;
+    color: #e8e4c9;
 }
 
 .cart span:nth-child(2){

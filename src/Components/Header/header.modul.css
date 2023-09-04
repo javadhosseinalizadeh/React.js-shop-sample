@@ -24,3 +24,7 @@ nav ul a:hover {
 nav ul a.active {
     color: #e0d8b5;
 }
+nav ul li:last-child {
+   position: absolute;  
+   left: 0;
+  }

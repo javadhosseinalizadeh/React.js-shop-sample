@@ -28,7 +28,7 @@ nav ul li:last-child {
    position: absolute;  
    left: 0;
   }
-  span {
-    color: white;
+ nav ul li span {
+    color: rgb(231, 231, 231);
     margin: 2px;
   }

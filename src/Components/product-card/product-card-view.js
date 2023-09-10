@@ -21,8 +21,8 @@ const ProductCardView = ({products}) => {
                      <ProductCardText>توضیحات: {product.description}</ProductCardText>
                      <ProductCardText>قیمت: {product.price}{" "}</ProductCardText>
                      <ProductCardFooter>
-                        <button onClick={()=>handleAddToCart(product)}>
-                            <span > اضافه کردن به سبد خرید</span>
+                        <button  onClick={()=>handleAddToCart(product)}>
+                            <span >اضافه به سبد خرید</span>
                         </button>
                      </ProductCardFooter>
                 </ProductCard>)}

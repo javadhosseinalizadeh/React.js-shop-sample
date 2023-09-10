@@ -1,25 +1,40 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import {increment,decrement} from '../../redux/add-slice'
-
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromCart, incrementQuantity, decrementQuantity } from '../../redux/cart-slice';
 
 const ProductCart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const counter = useSelector((store)=>store)
   const dispatch = useDispatch();
-console.log('card', cartItems)
+
+  const handleIncrement = (item) => {
+    dispatch(incrementQuantity(item.id));
+  };
+
+  const handleDecrement = (item) => {
+    dispatch(decrementQuantity(item.id));
+  };
+
+  const handleRemove = (item) => {
+    dispatch(removeFromCart(item.id));
+  };
+
   return (
     <div>
-      <h2>Shopping Cart</h2>
+      <h2>سبد خرید</h2>
       <ul>
         {cartItems.map((item) => (
           <li key={item.id}>
-            {item.title} - تعداد: {item.quantity}
+            {item.title}
+            <button onClick={() => handleIncrement(item)}>+1</button>
+            <span>{item.quantity}</span>
+            <button onClick={() => handleDecrement(item)}>-1</button>
+            <p>Quantity: {item.quantity}</p>
+            <button onClick={() => handleRemove(item)}>Remove</button>
           </li>
         ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default ProductCart
+export default ProductCart;

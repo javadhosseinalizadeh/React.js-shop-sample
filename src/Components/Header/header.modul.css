@@ -28,3 +28,7 @@ nav ul li:last-child {
    position: absolute;  
    left: 0;
   }
+  span {
+    color: white;
+    margin: 2px;
+  }

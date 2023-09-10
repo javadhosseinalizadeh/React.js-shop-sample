@@ -34,7 +34,6 @@ const ProductsPage = () => {
 
     const newItem = { title, price };
 
-    // Add the new item to the cart
     setCart((prevCart) => [...prevCart, newItem]);
   };
 

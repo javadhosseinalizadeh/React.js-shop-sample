@@ -22,7 +22,7 @@ const ProductCardView = ({products}) => {
                      <ProductCardText>قیمت: {product.price}{" "}</ProductCardText>
                      <ProductCardFooter>
                         <button  onClick={()=>handleAddToCart(product)}>
-                            <span >اضافه به سبد خرید</span>
+                            <span>اضافه به سبد خرید</span>
                         </button>
                      </ProductCardFooter>
                 </ProductCard>)}

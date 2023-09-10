@@ -36,7 +36,6 @@ const ProductsPage = () => {
 
     // Add the new item to the cart
     setCart((prevCart) => [...prevCart, newItem]);
-    console.log(newItem)
   };
 
   const filteredProducts = productList.filter((product) => {

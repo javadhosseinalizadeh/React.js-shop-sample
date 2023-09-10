@@ -6,6 +6,7 @@ import ProductsPage from "../products/products-page";
 import AboutPage from '../about/about-page';
 import Contact from '../contact/contact';
 import ProductCart from '../../Components/product-cart/product-cart';
+import NotFoundPage from '../not-found/not-found-page';
 const Container = () => {
   return (
     <MainLayout>
@@ -15,6 +16,7 @@ const Container = () => {
             <Route path={'/about'} element={<AboutPage />} />
             <Route path={'/contact'} element={<Contact />} />
             <Route path={'/cart'} element={<ProductCart />} />
+            <Route path='*' element={<NotFoundPage />} />
         </Routes>
     </MainLayout>
   )
